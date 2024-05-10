@@ -1,7 +1,7 @@
 const { ethers, upgrades } = require("hardhat");
 
 // proxy address
-const myContractProxyAddr = ""
+const myContractProxyAddr = "0x832036c71b68E61fDfc5BBca46fFBb302b834eB4"
 
 async function main() {
     const MyContractV2 = await ethers.getContractFactory("DanTokenV2");

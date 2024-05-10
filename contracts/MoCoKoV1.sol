@@ -23,6 +23,8 @@ contract MoCoKoV1 is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, 
         __Ownable_init(initialOwner);
         __ERC20Permit_init("MoCoKo");
         __ERC20FlashMint_init();
+
+        _mint(msg.sender, 100000 * 10 ** decimals());
     }
 
     function pause() public onlyOwner {
