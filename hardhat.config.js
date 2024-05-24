@@ -13,6 +13,10 @@ module.exports = {
       url: `https://sepolia-rollup.arbitrum.io/rpc`,
       accounts: [process.env.PRI_KEY],
     },
+    polygonTestnet: {
+      url: `http://127.0.0.1:8545`,
+      accounts: [process.env.TEST_PRI_KEY],
+    },
     test: {
       url: `http://127.0.0.1:8545`,
       accounts: [process.env.TEST_PRI_KEY],
@@ -23,6 +27,7 @@ module.exports = {
       arbitrumOne: process.env.ARBISCAN_API_KEY,
       arbitrumGoerli: process.env.ARBISCAN_API_KEY,
       arbitrumSepolia: process.env.ARBISCAN_API_KEY,
+      polygon: process.env.POLYGON_API_KEY,
     },
     customChains: [
       {
@@ -31,6 +36,14 @@ module.exports = {
         urls: {
           apiURL: "https://api-sepolia.arbiscan.io/api",
           browserURL: "https://sepolia.arbiscan.io/",
+        },
+      },
+      {
+        network: "amoypolygon",
+        chainId: 80002,
+        urls: {
+          apiURL: "https://api-amoy.polygonscan.com/api",
+          browserURL: "https://amoy.polygonscan.com/",
         },
       },
     ],
